@@ -1,6 +1,12 @@
-import React from "react";
+import styled from 'styled-components'
 
-const Titulo = ({ children }) => {
-  return <h1 className="titulo">{children}</h1>;
-};
+// eu vou dizer pro componente 
+// que esse children que eu to receebendo tem essa estilização e essa
+// nao é mais um componete e sim um estilizador de componete
+
+const Titulo = styled.h1`
+  color: black;
+  padding: 25px 0;
+`;
+
 export default Titulo;
