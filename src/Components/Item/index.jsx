@@ -15,7 +15,6 @@ export default ({ type, value, date, from }) => {
     <Item>
       <span className="text">{type}</span>
       <span>{value}</span>
-      <span>{date}</span>
       <span>{from}</span>
     </Item>
   );

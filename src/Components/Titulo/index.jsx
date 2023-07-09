@@ -5,8 +5,8 @@ import styled from 'styled-components'
 // nao é mais um componete e sim um estilizador de componete
 
 const Titulo = styled.h1`
-  color: black;
+  color: ${({theme})=>theme.text};
   padding: 25px 0;
 `;
 
-export default Titulo;
+export default Titulo;  

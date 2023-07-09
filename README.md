@@ -1,10 +1,53 @@
+# Foto do Projeto
+    Tema claro
+<img src="foto1.PNG" width="800" /> 
+
+    Tema escuro
+<img src="foto2.PNG" width="800" /> 
 
 # Obs :
 
-usando o styled-components
+  <h2>Usando o styled-components</h2>
 
 Lembre-se de declarar seus componentes e styled components fora dos métodos de renderização do React.
 
+Compor elementos estilizados para criar novas telas
+
+Implementar o tema escuro --ThemeProvider
+
+    import { ThemeProvider } from "styled-components";
+    import { temaEscuro, temaClaro } from "./Components/UI/temas";
+    import { BtnTema } from "./Components/UI";
+    import SwitcherTema from "./Components/SwitcherTema";
+
+E dano sua responsabilida pro arquivo transformando em obj 
+
+temas.js
+
+        export const temaClaro ={
+            body:fundoClaro,
+            inside:conteudoClaro,
+            text: textoFundoClaro,
+        };
+
+        export const temaEscuro ={
+            body: fundoEscuro,
+            inside:conteudoEscuro,
+            text: textoFundoEscuro,
+        }
+App.js
+
+        <ThemeProvider theme={tema ? temaClaro : temaEscuro}>
+
+Styled-Component Container-index.js
+
+         background-color: ${({theme})=> theme.body};
+
+
+
+alterar cores de icones SVG usando filter
+
+    filter : "invert(100%)",
 # Dependecias 
 
     npm install --save styled-components 
@@ -71,14 +114,12 @@ const Logo = styled.img`
 
 Pequenas mudança em um mesmo componente
 
-     background: ${(props)=> props.primary? "white" : corPrimaria};
-     color: ${(props)=> props.primary? corPrimaria : "white"}
 
-        <BotaoGeral primary href="https://google.com">
+        background: ${(props)=> props.$primary? "white" : corPrimaria};
+        color: ${(props)=> props.$primary? corPrimaria : "white"}
+
+        <BotaoGeral $primary href="https://google.com">
           Ajuda
-        </BotaoGeral>
-        <BotaoGeral href="https://google.com">
-          Sair
         </BotaoGeral>
 
 UI/index.js
@@ -112,6 +153,12 @@ Criar estilo dentro do js  como componete
 
 Criando novos Componentes Funcionais e adicionando
 o Styled Components a eles
+
+<h3>ImagFilter</h3>
+
+Coleçao de incones em um so luvar determinado pelo obj 
+ImagenssFilter import
+
 
 
 <h2>Fonte</h2>
