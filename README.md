@@ -1,9 +1,9 @@
 # Foto do Projeto
     Tema claro
-<img src="foto1.PNG" width="800" /> 
+<img src="Foto1.PNG" width="800" /> 
 
     Tema escuro
-<img src="foto2.PNG" width="800" /> 
+<img src="Foto2.PNG" width="800" /> 
 
 # Obs :
 
